@@ -1,0 +1,128 @@
+.trip-form {
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.98) 0%, rgba(230, 250, 245, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(32, 178, 170, 0.2);
+}
+
+.trip-form h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #20b2aa 0%, #008b8b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a2e;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.required {
+  color: #ff6b6b;
+  margin-left: 4px;
+  font-size: 1.2rem;
+}
+
+.form-group input {
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  font-weight: 500;
+  color: #1a1a2e;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.form-group input:hover {
+  border-color: #20b2aa;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #20b2aa;
+  box-shadow: 0 0 0 4px rgba(32, 178, 170, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-group small {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #20b2aa 0%, #008b8b 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(32, 178, 170, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(32, 178, 170, 0.5);
+}
+
+.submit-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(32, 178, 170, 0.4);
+}
+
+@media (max-width: 768px) {
+  .trip-form {
+    padding: 1.5rem;
+  }
+
+  .trip-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
